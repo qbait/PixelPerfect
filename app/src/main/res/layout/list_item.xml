@@ -23,8 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorTitle"
-            android:textSize="20dp"
-            android:textStyle="bold"/>
+            android:textSize="20dp"/>
 
         <TextView
             android:id="@+id/description"
@@ -47,14 +46,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
-                android:textStyle="bold"
                 android:textColor="@color/colorScore"
                 android:layout_marginRight="4dp"/>
 
             <ImageView
                 android:id="@+id/star"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@drawable/star_selector"
                 android:layout_marginRight="12dp"/>
 
