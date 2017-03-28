@@ -45,10 +45,11 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MyViewHold
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Item item = items.get(position);
         holder.title.setText(item.getTitle());
-        holder.score.setText(item.getDescription());
-        holder.description.setText(item.getScore());
+        holder.score.setText(item.getScore());
+        holder.description.setText(item.getDescription());
         holder.star.setEnabled(item.isOrderFree());
         holder.image.setImageDrawable(item.getImage());
+        holder.alert.setEnabled(item.isOrderFree());
 
         if(item.isOrderFree()) {
             holder.alert.setText("Order for free!");
