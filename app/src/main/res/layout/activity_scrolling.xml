@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="232dp"
         android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@drawable/appbar_gradient">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/toolbar_layout"
@@ -45,29 +46,32 @@
             </android.support.v7.widget.Toolbar>
 
             <RelativeLayout
+                android:id="@+id/content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
 
                 <TextView
-                    android:id="@+id/points"
+                    android:id="@+id/pointsHint"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="72dp"
                     android:text="YOUR POINTS"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:textColor="@color/colorAppBarPointsHint"/>
 
                 <TextView
                     android:id="@+id/score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/points"
+                    android:layout_below="@+id/pointsHint"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="-20dp"
+                    android:layout_marginTop="-16dp"
                     android:text="0"
-                    android:textSize="88dp" />
+                    android:textSize="88dp"
+                    android:textColor="@color/colorAppBarScore"/>
 
                 <ImageView
                     android:id="@+id/star"
@@ -78,7 +82,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_toEndOf="@+id/score"
                     android:layout_toRightOf="@+id/score"
-                    app:srcCompat="@drawable/star_enabled"
+                    android:src="@drawable/star_appbar"
                     />
 
 

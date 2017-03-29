@@ -13,4 +13,13 @@
     <color name="colorIconSettings">#e1bfff</color>
     <color name="colorStarEnabled">#FFCC13</color>
     <color name="colorStarDisabled">#D8D8D8</color>
+
+    <color name="colorAppBarGradientStart">#8e5cbb</color>
+    <color name="colorAppBarGradientCenter">#8251bc</color>
+    <color name="colorAppBarGradientEnd">#7949c2</color>
+
+    <color name="colorAppBarScore">#D8D8D8</color>
+    <color name="colorAppBarPointsHint">#E1BFFF</color>
+
+
 </resources>

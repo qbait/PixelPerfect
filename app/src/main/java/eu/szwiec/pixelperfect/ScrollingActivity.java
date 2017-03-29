@@ -1,11 +1,8 @@
 package eu.szwiec.pixelperfect;
 
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewCompat;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +19,10 @@ public class ScrollingActivity extends AppCompatActivity {
     private List<Item> itemList = new ArrayList<>();
     private RecyclerView recyclerView;
     private MoviesAdapter mAdapter;
+    private AppBarLayout.OnOffsetChangedListener mListener;
+    private CollapsingToolbarLayout collapsingToolbar;
+    private AppBarLayout appBar;
+    private View collapsingToolbarContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,9 @@ public class ScrollingActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
+        appBar = (AppBarLayout) findViewById(R.id.app_bar);
+        collapsingToolbarContent = findViewById(R.id.content);
 
         mAdapter = new MoviesAdapter(itemList);
 
@@ -41,6 +46,16 @@ public class ScrollingActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(dividerItemDecoration);
 
         prepareMovieData();
+
+        mListener = new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                float percentage = ((float)Math.abs(verticalOffset)/appBarLayout.getTotalScrollRange());
+                collapsingToolbarContent.setAlpha(1-percentage);
+            }
+        };
+
+        appBar.addOnOffsetChangedListener(mListener);
     }
 
     @Override
