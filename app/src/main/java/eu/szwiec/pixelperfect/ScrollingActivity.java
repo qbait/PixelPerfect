@@ -15,6 +15,9 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
+import eu.szwiec.pixelperfect.model.Drink;
+import eu.szwiec.pixelperfect.model.Header;
+
 public class ScrollingActivity extends AppCompatActivity {
     private List<Object> itemList = new ArrayList<>();
     private RecyclerView recyclerView;
@@ -75,6 +78,7 @@ public class ScrollingActivity extends AppCompatActivity {
     }
 
     private void prepareMovieData() {
+        itemList.add(new Header());
         itemList.add("Available offers");
         itemList.add(new Drink("Extra Espresso", "Add a little kick to your coffee lorem ipsum dolores.", "25", true, getResources().getDrawable(R.drawable.espresso)));
         itemList.add(new Drink("Cafe Latte", "Add a little kick to your coffee lorem ipsum dolores.", "25", true, getResources().getDrawable(R.drawable.latte)));

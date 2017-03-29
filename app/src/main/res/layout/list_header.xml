@@ -1,13 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:background="@color/colorHeaderBg"
+                android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/points"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="12dp"
+        />
+
+
+
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="34dp"/>
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:text="How to earn points?"
+        android:textSize="20dp"
+        android:textColor="@color/colorHeaderTitle"
+        android:layout_marginBottom="2dp"/>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@+id/imageView"
+        android:textSize="14dp"
+        android:text="Everytime you make a shopping in our store you get points click for more info."
+        android:layout_toLeftOf="@+id/dismiss"
+        android:layout_toStartOf="@+id/dismiss"
+        android:layout_toEndOf="@+id/imageView"
+        android:textColor="@color/colorHeaderDetails"
+        />
+
+    <ImageView
+        android:id="@+id/dismiss"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="8dp"
+        android:layout_marginTop="-8dp"
+        android:layout_marginRight="-8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/close"
+        android:background="?selectableItemBackgroundBorderless"
+        />
+
+</RelativeLayout>

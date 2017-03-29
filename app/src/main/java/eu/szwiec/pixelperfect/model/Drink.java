@@ -1,4 +1,4 @@
-package eu.szwiec.pixelperfect;
+package eu.szwiec.pixelperfect.model;
 
 import android.graphics.drawable.Drawable;
 

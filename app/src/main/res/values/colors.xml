@@ -22,4 +22,9 @@
     <color name="colorAppBarPointsHint">#E1BFFF</color>
     <color name="colorSubheader">#C9C1D0</color>
 
+    <color name="colorHeaderBg">#FFD556</color>
+    <color name="colorHeaderTitle">#343434</color>
+    <color name="colorHeaderDetails">#6F6F6F</color>
+    <color name="colorHeaderDismiss">#808080</color>
+
 </resources>

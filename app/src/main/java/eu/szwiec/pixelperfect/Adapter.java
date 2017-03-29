@@ -4,10 +4,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
+
+import eu.szwiec.pixelperfect.model.Drink;
+import eu.szwiec.pixelperfect.model.Header;
 
 public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -61,15 +66,21 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     public class HeaderViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView text;
+        public ImageView dismiss;
 
         public HeaderViewHolder(View view){
             super(view);
-            text = (TextView) view.findViewById(R.id.text);
+            dismiss = (ImageView) view.findViewById(R.id.dismiss);
         }
 
-        public void setText(String text) {
-            this.text.setText(text);
+        public void setListener(final int position) {
+            dismiss.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    items.remove(position);
+                    notifyItemRemoved(position);
+                }
+            });
         }
     }
 
@@ -106,16 +117,18 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         } else if (itemType == ITEM_TYPE_SECTION) {
             ((SectionViewHolder)holder).setText((String)items.get(position));
         } else if (itemType == ITEM_TYPE_HEADER) {
-            ((HeaderViewHolder)holder).setText((String)items.get(position));
+            ((HeaderViewHolder)holder).setListener(position);
         }
     }
 
     @Override
     public int getItemViewType(int position) {
-        if (items.get(position) instanceof String) {
-            return ITEM_TYPE_SECTION;
-        } else {
+        if (items.get(position) instanceof Drink) {
             return ITEM_TYPE_DRINK;
+        } else if (items.get(position) instanceof Header){
+            return ITEM_TYPE_HEADER;
+        } else {
+            return ITEM_TYPE_SECTION;
         }
     }
 
