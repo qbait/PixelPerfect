@@ -6,15 +6,12 @@ import android.graphics.drawable.Drawable;
  * Created by szwiec on 28/03/2017.
  */
 
-public class Item {
+public class Drink {
     private String title, description, score;
     private boolean isOrderFree;
     private Drawable image;
 
-    public Item() {
-    }
-
-    public Item(String title, String description, String score, boolean isOrderFree, Drawable image) {
+    public Drink(String title, String description, String score, boolean isOrderFree, Drawable image) {
         this.title = title;
         this.description = description;
         this.score = score;

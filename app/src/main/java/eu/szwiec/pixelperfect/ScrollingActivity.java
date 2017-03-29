@@ -16,9 +16,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ScrollingActivity extends AppCompatActivity {
-    private List<Item> itemList = new ArrayList<>();
+    private List<Object> itemList = new ArrayList<>();
     private RecyclerView recyclerView;
-    private MoviesAdapter mAdapter;
+    private Adapter mAdapter;
     private AppBarLayout.OnOffsetChangedListener mListener;
     private CollapsingToolbarLayout collapsingToolbar;
     private AppBarLayout appBar;
@@ -37,7 +37,7 @@ public class ScrollingActivity extends AppCompatActivity {
         appBar = (AppBarLayout) findViewById(R.id.app_bar);
         collapsingToolbarContent = findViewById(R.id.content);
 
-        mAdapter = new MoviesAdapter(itemList);
+        mAdapter = new Adapter(itemList);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(mAdapter);
@@ -75,11 +75,13 @@ public class ScrollingActivity extends AppCompatActivity {
     }
 
     private void prepareMovieData() {
-        itemList.add(new Item("Extra Espresso", "Add a little kick to your coffee lorem ipsum dolores.", "25", true, getResources().getDrawable(R.drawable.espresso)));
-        itemList.add(new Item("Cafe Latte", "Add a little kick to your coffee lorem ipsum dolores.", "25", true, getResources().getDrawable(R.drawable.latte)));
-        itemList.add(new Item("Chocolate", "Add a little kick to your coffee lorem ipsum dolores.", "25", false, getResources().getDrawable(R.drawable.chocolate)));
-        itemList.add(new Item("Cafe Latte", "Add a little kick to your coffee lorem ipsum dolores.", "25", false, getResources().getDrawable(R.drawable.latte)));
-        itemList.add(new Item("Chocolate", "Add a little kick to your coffee lorem ipsum dolores.", "25", false, getResources().getDrawable(R.drawable.chocolate)));
+        itemList.add("Available offers");
+        itemList.add(new Drink("Extra Espresso", "Add a little kick to your coffee lorem ipsum dolores.", "25", true, getResources().getDrawable(R.drawable.espresso)));
+        itemList.add(new Drink("Cafe Latte", "Add a little kick to your coffee lorem ipsum dolores.", "25", true, getResources().getDrawable(R.drawable.latte)));
+        itemList.add(new Drink("Chocolate", "Add a little kick to your coffee lorem ipsum dolores.", "25", false, getResources().getDrawable(R.drawable.chocolate)));
+        itemList.add(new Drink("Cafe Latte", "Add a little kick to your coffee lorem ipsum dolores.", "25", false, getResources().getDrawable(R.drawable.latte)));
+        itemList.add(new Drink("Chocolate", "Add a little kick to your coffee lorem ipsum dolores.", "25", false, getResources().getDrawable(R.drawable.chocolate)));
+
 
         mAdapter.notifyDataSetChanged();
     }

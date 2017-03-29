@@ -20,6 +20,6 @@
 
     <color name="colorAppBarScore">#D8D8D8</color>
     <color name="colorAppBarPointsHint">#E1BFFF</color>
-
+    <color name="colorSubheader">#C9C1D0</color>
 
 </resources>
