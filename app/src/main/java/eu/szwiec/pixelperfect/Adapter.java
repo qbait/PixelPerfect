@@ -4,8 +4,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,7 +21,7 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public class SectionViewHolder extends RecyclerView.ViewHolder {
         public TextView text;
 
-        public SectionViewHolder(View view){
+        public SectionViewHolder(View view) {
             super(view);
             text = (TextView) view.findViewById(R.id.text);
         }
@@ -56,7 +54,7 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             image.setImageDrawable(drink.getImage());
             alert.setEnabled(drink.isOrderFree());
 
-            if(drink.isOrderFree()) {
+            if (drink.isOrderFree()) {
                 alert.setText("Order for free!");
             } else {
                 alert.setText("You need 40 points");
@@ -68,7 +66,7 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         public ImageView dismiss;
 
-        public HeaderViewHolder(View view){
+        public HeaderViewHolder(View view) {
             super(view);
             dismiss = (ImageView) view.findViewById(R.id.dismiss);
         }
@@ -113,11 +111,11 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         final int itemType = getItemViewType(position);
 
         if (itemType == ITEM_TYPE_DRINK) {
-            ((DrinkViewHolder)holder).bindData((Drink) items.get(position));
+            ((DrinkViewHolder) holder).bindData((Drink) items.get(position));
         } else if (itemType == ITEM_TYPE_SECTION) {
-            ((SectionViewHolder)holder).setText((String)items.get(position));
+            ((SectionViewHolder) holder).setText((String) items.get(position));
         } else if (itemType == ITEM_TYPE_HEADER) {
-            ((HeaderViewHolder)holder).setListener(position);
+            ((HeaderViewHolder) holder).setListener(position);
             holder.itemView.setTag(R.id.noSpaceAfter, Boolean.TRUE);
         }
     }
@@ -126,7 +124,7 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public int getItemViewType(int position) {
         if (items.get(position) instanceof Drink) {
             return ITEM_TYPE_DRINK;
-        } else if (items.get(position) instanceof Header){
+        } else if (items.get(position) instanceof Header) {
             return ITEM_TYPE_HEADER;
         } else {
             return ITEM_TYPE_SECTION;

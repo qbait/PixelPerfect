@@ -50,8 +50,8 @@ public class ScrollingActivity extends AppCompatActivity {
         mListener = new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                float percentage = ((float)Math.abs(verticalOffset)/appBarLayout.getTotalScrollRange());
-                collapsingToolbarContent.setAlpha(1-percentage);
+                float percentage = ((float) Math.abs(verticalOffset) / appBarLayout.getTotalScrollRange());
+                collapsingToolbarContent.setAlpha(1 - percentage);
             }
         };
 
