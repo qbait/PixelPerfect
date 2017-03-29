@@ -118,6 +118,7 @@ public class Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             ((SectionViewHolder)holder).setText((String)items.get(position));
         } else if (itemType == ITEM_TYPE_HEADER) {
             ((HeaderViewHolder)holder).setListener(position);
+            holder.itemView.setTag(R.id.noSpaceAfter, Boolean.TRUE);
         }
     }
 
