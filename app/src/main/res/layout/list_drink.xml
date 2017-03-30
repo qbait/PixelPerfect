@@ -22,14 +22,14 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorTitle"
+            android:textColor="@color/title"
             android:textSize="20dp"/>
 
         <TextView
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorDescription"
+            android:textColor="@color/description"
             android:textSize="14dp"
             />
 
@@ -46,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
-                android:textColor="@color/colorScore"
+                android:textColor="@color/score"
                 android:layout_marginRight="4dp"/>
 
             <ImageView

@@ -60,7 +60,7 @@
                     android:layout_marginTop="72dp"
                     android:text="YOUR POINTS"
                     android:textSize="14dp"
-                    android:textColor="@color/colorAppBarPointsHint"/>
+                    android:textColor="@color/appBarPointsHint"/>
 
                 <TextView
                     android:id="@+id/score"
@@ -71,7 +71,7 @@
                     android:layout_marginTop="-16dp"
                     android:text="0"
                     android:textSize="88dp"
-                    android:textColor="@color/colorAppBarScore"/>
+                    android:textColor="@color/appBarScore"/>
 
                 <ImageView
                     android:id="@+id/star"

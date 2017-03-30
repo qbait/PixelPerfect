@@ -9,7 +9,7 @@
         android:translateX="-445.000000"
         android:translateY="-226.000000">
         <path
-            android:fillColor="@color/colorStarDisabled"
+            android:fillColor="@color/starDisabled"
             android:fillType="evenOdd"
             android:strokeWidth="1"
             android:pathData="M 485 289.087733 L 509.72136 302.084521 L 505 274.556883 L 525 255.061701 L 497.36068 251.045473 L 485 226 L 472.63932 251.045473 L 445 255.061701 L 465 274.556883 L 460.27864 302.084521 "/>

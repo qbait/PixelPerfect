@@ -3,7 +3,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorHeaderBg"
+                android:background="@color/headerBg"
                 android:padding="16dp">
 
     <ImageView
@@ -27,7 +27,7 @@
         android:layout_toRightOf="@+id/imageView"
         android:text="How to earn points?"
         android:textSize="20dp"
-        android:textColor="@color/colorHeaderTitle"
+        android:textColor="@color/headerTitle"
         android:layout_marginBottom="2dp"/>
 
     <TextView
@@ -41,7 +41,7 @@
         android:layout_toLeftOf="@+id/dismiss"
         android:layout_toStartOf="@+id/dismiss"
         android:layout_toEndOf="@+id/imageView"
-        android:textColor="@color/colorHeaderDetails"
+        android:textColor="@color/headerDetails"
         />
 
     <ImageView

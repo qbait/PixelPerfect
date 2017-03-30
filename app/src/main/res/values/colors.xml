@@ -4,27 +4,27 @@
     <color name="colorPrimaryDark">#643aa4</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="colorTitle">#333</color>
-    <color name="colorDescription">#999</color>
-    <color name="colorScore">#1E1D1F</color>
-    <color name="colorAlertEnabled">#82C439</color>
-    <color name="colorAlertDisabled">#AAAAAA</color>
+    <color name="title">#333</color>
+    <color name="description">#999</color>
+    <color name="score">#1E1D1F</color>
+    <color name="alertEnabled">#82C439</color>
+    <color name="alertDisabled">#AAAAAA</color>
 
-    <color name="colorIconSettings">#e1bfff</color>
-    <color name="colorStarEnabled">#FFCC13</color>
-    <color name="colorStarDisabled">#D8D8D8</color>
+    <color name="iconSettings">#e1bfff</color>
+    <color name="starEnabled">#FFCC13</color>
+    <color name="starDisabled">#D8D8D8</color>
 
-    <color name="colorAppBarGradientStart">#8e5cbb</color>
-    <color name="colorAppBarGradientCenter">#8251bc</color>
-    <color name="colorAppBarGradientEnd">#7949c2</color>
+    <color name="appBarGradientStart">#8e5cbb</color>
+    <color name="appBarGradientCenter">#8251bc</color>
+    <color name="appBarGradientEnd">#7949c2</color>
 
-    <color name="colorAppBarScore">#D8D8D8</color>
-    <color name="colorAppBarPointsHint">#E1BFFF</color>
-    <color name="colorSubheader">#C9C1D0</color>
+    <color name="appBarScore">#D8D8D8</color>
+    <color name="appBarPointsHint">#E1BFFF</color>
+    <color name="subheader">#C9C1D0</color>
 
-    <color name="colorHeaderBg">#FFD556</color>
-    <color name="colorHeaderTitle">#343434</color>
-    <color name="colorHeaderDetails">#6F6F6F</color>
-    <color name="colorHeaderDismiss">#808080</color>
+    <color name="headerBg">#FFD556</color>
+    <color name="headerTitle">#343434</color>
+    <color name="headerDetails">#6F6F6F</color>
+    <color name="headerDismiss">#808080</color>
 
 </resources>

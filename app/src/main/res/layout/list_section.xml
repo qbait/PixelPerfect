@@ -15,8 +15,7 @@
         android:paddingTop="28dp"
         android:paddingBottom="4dp"
         android:clickable="false"
-        android:text="Subheader"
-        android:textColor="@color/colorSubheader"
+        android:textColor="@color/subheader"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"/>
 
 </LinearLayout>
