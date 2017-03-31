@@ -5,6 +5,6 @@ Uses RecyclerView with custom items, CoordinatorLayout, VectorDravable, ...
 TODO
 As project would get bigger, I should definitely separate, styles, dimens, ...
 
-![alt tag](Screenshot.png){ width: 400px; }
-
-![](Screenshot.png | width=100)
+<p align="center">
+  <img src="https://github.com/screenshot.png" width="320">
+</p>
