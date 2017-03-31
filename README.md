@@ -6,5 +6,5 @@ TODO
 As project would get bigger, I should definitely separate, styles, dimens, ...
 
 <p align="center">
-  <img src="https://github.com/screenshot.png" width="320">
+  <img src="screenshot.png" width="320">
 </p>
